@@ -9,6 +9,10 @@
         padding: 60px 0 40px 0;
     }
 
+    @include media(md) {
+        background-attachment: inherit;
+    }
+
     &__title {
         text-transform: uppercase;
 

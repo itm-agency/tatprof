@@ -23,6 +23,12 @@
                width: 100%;
             }
 
+            &:not(:last-child) {
+                @include media(md) {
+                    padding-bottom: 10px;
+                }
+            }
+
             a {
                 color: #838383;
 

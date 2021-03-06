@@ -9,6 +9,10 @@
     background-attachment: fixed;
     color: #fff;
 
+    @include media(md) {
+        background-attachment: inherit;
+    }
+
     &__container {
         max-width: 350px;
         margin: 0 auto;

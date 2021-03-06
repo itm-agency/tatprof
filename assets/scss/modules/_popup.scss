@@ -2,4 +2,13 @@
 
     padding: 80px;
 
+    @include media(md) {
+        padding: 40px;
+    }
+
+    @include media(xs) {
+        padding: 30px;
+    }
+
+
 }
