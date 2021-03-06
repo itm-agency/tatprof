@@ -1,0 +1,82 @@
+/**
+ * Breakpoints
+ */
+$breakpoints: (
+        xs: 500px,
+        sm: 767px,
+        md: 991px,
+        lg: 1200px,
+        xl: 1400px,
+);
+
+/**
+ * Body
+ */
+$font-body                      :   'Open Sans', sans-serif;
+$color-body                     :   #252c34;
+$color-h                        :   #252c34;
+$textSize-body                  :   18px;
+$textLineHeight-body            :   24px;
+$backgroundColor-body           :   #fff;
+$fontWeight-body                :   400;
+
+$textSize-body-medium           :   14px;
+$textLineHeight-body-medium     :   20px;
+
+/**
+ * Container
+ */
+$container-padding              :   30px;
+$container-maxWidth             :   1430px;
+/**
+ * Link
+ */
+$color-link                     :   #252c34;
+
+/**
+ * Background
+ */
+$background-blue                :   #163670;
+$background-red                 :   #e31c24;
+$background-grey                :   #efefef;
+
+
+/**
+ * Colors
+ */
+
+$color-primary      :   #1C9DE3;
+$color-secondary    :   #0B2837;
+$color-blue         :   #001485;
+$color-blue-dark    :   #133C52;
+$color-blue-light   :   #ECF8FF;
+$color-dark         :   #232323;
+$color-dark-alt     :   #292929;
+$color-gray         :   #DADADA;
+$color-gray-light   :   #F2F1F1;
+$color-gray-dark    :   #909090;
+$color-yellow       :   #FBBC04;
+$color-text         :   #ACACAC;
+$color-white        :   #fff;
+$color-light        :   #E7E5E5;
+$color-red          :   #F81A5D;
+$color-green        :   #00CC33;
+$color-purple       :   #7C62E3;
+
+
+/**
+ * Btn Style
+ */
+$btn-height                 :   80px;
+$btn-font-size              :   18px;
+$btn-border-width           :   2px;
+$btn-border-color           :   $background-blue;
+$btn-background-color       :   $background-blue;
+$btn-color                  :   #fff;
+
+/**
+ *
+ */
+$border-radius              :   0px;
+
+

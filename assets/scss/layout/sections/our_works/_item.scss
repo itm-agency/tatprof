@@ -1,0 +1,93 @@
+.our_works {
+
+    &__list {
+
+        &-item {
+            display: block;
+            width: 100%;
+
+            &--image {
+                position: relative;
+                z-index: 1;
+                margin: 0 0 20px 0;
+
+                img {
+                    position: relative;
+                    z-index: 2;
+
+                    @include media(sm) {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    @include media(xs) {
+                        height: 300px;
+                    }
+
+                }
+
+                .arrow {
+                    $size: 70px;
+                    $size-md: 50px;
+                    width: $size;
+                    height: $size;
+                    background-color: $background-red;
+                    font-size: 38px;
+                    position: absolute;
+                    z-index: 3;
+                    right: 0;
+                    bottom: 0;
+                    color: #fff;
+                    overflow: hidden;
+
+                    @include media(lg) {
+                        width: $size-md;
+                        height: $size-md;
+                        font-size: 28px;
+                    }
+
+                    i {
+                        position: relative;
+                        left: 50%;
+                        top: 50%;
+                        transform: translateX(-50%) translateY(-50%);
+                    }
+
+                }
+
+            }
+
+            &:hover {
+
+                .arrow {
+                    i {
+                        animation: marquee .8s infinite linear;
+                    }
+                }
+
+                span {
+                    text-decoration: underline;
+                }
+
+            }
+
+            span {
+                font-weight: 700;
+                color: $color-link;
+            }
+
+            p {
+                display: block;
+                margin: 0;
+                padding: 5px 0 0 0;
+                font-size: 15px;
+                color: #838383;
+                font-weight: 600;
+            }
+
+        }
+
+    }
+
+}

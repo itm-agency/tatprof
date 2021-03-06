@@ -1,0 +1,56 @@
+.logos {
+    padding: 0 0 50px 0;
+
+    @include media(md) {
+        padding: 0 0 40px 0;
+    }
+
+    &.paddtop {
+        padding: 100px 0 50px 0;
+
+        @include media(md) {
+            padding: 40px 0 40px 0;
+        }
+
+    }
+
+
+    &__item {
+        @include _flexbox();
+        @include _align-items(center);
+        @include _justify-content(center);
+        padding: 0 40px;
+        border-right: 1px solid #e8e8e8;
+        height: 120px;
+
+        @include media(lg) {
+            padding: 0 25px;
+        }
+
+    }
+
+    .swiper {
+
+        &-controls {
+            padding: 50px 0 0 0;
+        }
+
+        &-container {
+            position: relative;
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                width: 2px;
+                background-color: #fff;
+                z-index: 2;
+            }
+
+        }
+    }
+
+}

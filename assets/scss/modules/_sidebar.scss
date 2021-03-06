@@ -1,0 +1,73 @@
+.sidebar {
+    $width-left: 330px;
+    $width-left-md: 290px;
+    @include _flexbox();
+    @include media(md) {
+        @include _flex-flow(column nowrap);
+        padding: 40px 0;
+    }
+
+    &__left {
+        width: $width-left;
+        background-color: $background-grey;
+        @include media(lg) {
+            width: $width-left-md;
+        }
+        @include media(md) {
+            display: none;
+            width: 100%;
+
+            .sidebar_menu__active & {
+                display: block;
+            }
+
+        }
+
+        &-btnmobile {
+            @include _align-items(center);
+            @include _justify-content(space-between);
+            display: none;
+            padding: 0 30px;
+            background-color: $background-grey;
+            font-size: 15px;
+            height: 60px;
+            font-weight: 600;
+            margin: 0;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+
+            &::after {
+                content: '\f107';
+                font-family: FontAwesome;
+
+                .sidebar_menu__active & {
+                    content: '\f106';
+                }
+
+            }
+
+            @include media(md) {
+                @include _flexbox();
+            }
+
+        }
+
+    }
+
+    &__right {
+        width: calc(100% - #{$width-left});
+        padding: 50px 0 50px 70px;
+        @include media(lg) {
+            padding-left: 40px;
+            width: calc(100% - #{$width-left-md});
+        }
+        @include media(md) {
+            width: 100%;
+            padding-left: 0;
+            padding-top: 40px;
+            padding-bottom: 0;
+        }
+    }
+
+}

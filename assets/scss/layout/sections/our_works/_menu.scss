@@ -1,0 +1,48 @@
+.our_works {
+
+    &__menu {
+        @include _flexbox();
+        @include _flex-wrap(wrap);
+        font-size: 17px;
+        font-weight: 600;
+        margin: 0 0 110px 0;
+
+        @include media(lg) {
+            margin: 0 0 50px 0;
+            font-size: 15px;
+        }
+
+        > li {
+            @include _flexbox();
+            @include _flex-flow(column nowrap);
+            border-left: 2px solid $background-red;
+            padding: 0 0 0 25px;
+            width: 33.32%;
+
+            @include media(md) {
+               width: 100%;
+            }
+
+            a {
+                color: #838383;
+
+                &:hover {
+                    font-weight: 700;
+                    text-decoration: underline;
+                    color: #5d99e6;
+                }
+
+            }
+
+            > div {
+                &:not(:last-child) {
+                    margin: 0 0 10px 0;
+                }
+            }
+
+        }
+
+
+    }
+
+}

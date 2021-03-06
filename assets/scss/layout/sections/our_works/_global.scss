@@ -1,0 +1,9 @@
+.our_works {
+    padding: 100px 0;
+
+    @include media(lg) {
+        padding: 0 0 50px 0;
+    }
+
+
+}

@@ -1,0 +1,47 @@
+.pagehead {
+    padding: 120px 0 60px 0;
+    background-attachment: fixed;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include media(lg) {
+        padding: 60px 0 40px 0;
+    }
+
+    &__title {
+        text-transform: uppercase;
+
+        &.normal{
+            font-weight: normal;
+        }
+
+    }
+
+    &.image {
+        padding: 240px 0 120px 0;
+
+        @include media(lg) {
+            padding: 160px 0 80px 0;
+        }
+
+        .pagehead {
+            &__title {
+                color: #fff;
+            }
+        }
+        .breadcrumbs {
+            > li {
+                color: #dadada;
+                a {
+                    color: #fff;
+                }
+                &::after {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+
+}

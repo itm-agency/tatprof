@@ -1,0 +1,9 @@
+.about {
+    background: $background-grey url('../images/about-background-text.jpg') right bottom no-repeat;
+    padding: 130px 0;
+
+    @include media(md) {
+        padding: 50px 0;
+    }
+
+}

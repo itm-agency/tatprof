@@ -1,0 +1,27 @@
+.catalog {
+
+    &__list{
+        @include _flexbox();
+        @include _flex-wrap(wrap);
+        position: relative;
+        margin: 0 -10px;
+
+        > li {
+            @include _flexbox();
+            width: 33.32%;
+            padding: 0 10px;
+            margin: 0 0 20px 0;
+
+            @include media(md) {
+                width: 50%;
+            }
+
+            @include media(xs) {
+                width: 100%;
+            }
+
+        }
+
+    }
+
+}

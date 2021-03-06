@@ -1,0 +1,56 @@
+.object {
+
+    &__related {
+        background-color: $background-grey;
+        padding: 85px 0 110px 0;
+
+        @include media(lg) {
+            padding: 40px 0 40px 0;
+        }
+
+        &-headpanel {
+            border-bottom: 1px solid #dadada;
+            position: relative;
+            margin: 0 0 85px 0;
+
+            @include media(lg) {
+                margin: 0 0 40px 0;
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                height: 2px;
+                background-color: $background-red;
+                left: 0;
+                bottom: 0;
+                width: 200px;
+                position: absolute;
+            }
+
+            &--title {
+                font-size: 32px;
+                line-height: 42px;
+                font-weight: normal;
+            }
+
+        }
+
+        .swiper {
+
+            &-controls {
+                padding: 55px 0 0 0;
+
+                @include media(xs) {
+                    padding: 40px 0 0 0;
+                }
+
+            }
+
+        }
+
+
+    }
+
+
+}

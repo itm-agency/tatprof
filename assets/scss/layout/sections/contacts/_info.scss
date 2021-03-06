@@ -1,0 +1,136 @@
+.contacts {
+
+    &__info {
+        $font-size: 32px;
+        $font-size-p: 24px;
+        $font-size-md: 26px;
+        $font-size-p-md: 18px;
+        padding: 200px 0;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        @include media(lg) {
+            padding: 100px 0;
+        }
+
+        @include media(md) {
+            padding: 40px 0 0 0;
+        }
+
+        &-city {
+            @include media(md) {
+                margin: 0 0 40px 0;
+            }
+
+            span {
+                display: block;
+                font-size: $font-size;
+                line-height: $font-size;
+                font-weight: 700;
+                margin: 0 0 18px 0;
+                @include media(lg) {
+                    font-size: $font-size-md;
+                    line-height: $font-size-md;
+                }
+                @include media(md) {
+                    font-size: 20px;
+                    line-height: 20px;
+                    margin: 0 0 10px 0;
+                }
+            }
+
+            p {
+                padding: 0;
+                margin: 0;
+                font-size: $font-size-p;
+                line-height: 32px;
+                @include media(lg) {
+                    font-size: $font-size-p-md;
+                    line-height: 28px;
+                }
+                @include media(md) {
+                    font-size: 15px;
+                    line-height: 20px;
+                }
+            }
+
+        }
+
+        &-phone {
+            text-align: right;
+            @include media(md) {
+                text-align: left;
+                margin: 0 0 40px 0;
+            }
+
+            &--link {
+                color: #438ae4;
+                text-decoration: underline;
+                font-size: $font-size-p;
+                @include media(lg) {
+                    font-size: $font-size-p-md;
+                }
+                @include media(md) {
+                    font-size: 15px;
+                    line-height: 20px;
+                }
+
+                &:visited {
+                    color: #438ae4;
+                }
+
+            }
+
+            &--tel {
+                @include _flexbox();
+                @include _align-items(flex-end);
+                @include _justify-content(flex-end);
+                font-size: $font-size;
+                line-height: $font-size;
+                color: $color-body ;
+                font-weight: 700;
+                margin: 0 0 18px 0;
+                text-decoration: none;
+                white-space: nowrap;
+                @include media(lg) {
+                    font-size: $font-size-md;
+                    line-height: $font-size-md;
+                }
+                @include media(md) {
+                    @include _justify-content(flex-start);
+                    font-size: 20px;
+                    line-height: 20px;
+                    margin: 0 0 10px 0;
+                }
+
+
+
+                &::before{
+                    $size: 20px;
+                    content: '';
+                    display: inline-block;
+                    width: $size;
+                    height: $size;
+                    background: url('../images/ic_tel.svg') center center no-repeat;
+                    background-size: contain;
+                    margin: 0 10px 0 0;
+                    position: relative;
+                    top: -2px;
+                    @include media(md) {
+                        $size: 15px;
+                        width: $size;
+                        height: $size;
+                    }
+                }
+
+                span {
+                    color: #438ae4;
+                }
+
+            }
+
+        }
+
+    }
+
+}

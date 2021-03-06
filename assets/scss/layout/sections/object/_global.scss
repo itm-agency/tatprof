@@ -1,0 +1,45 @@
+.object {
+
+    &__row {
+        $width-right: 480px;
+        @include _flexbox();
+        @include _align-items(center);
+        padding: 0 0 90px 0;
+
+        @include media(lg) {
+            padding: 0 0 40px 0;
+        }
+
+        @include media(md) {
+            @include _flex-flow(column nowrap);
+        }
+
+        &-left {
+            width: calc(100% - #{$width-right});
+
+            @include media(md) {
+                width: 100%;
+                margin: 0 0 40px 0;
+            }
+
+        }
+
+        &-right {
+            width: $width-right;
+            padding: 0 0 0 60px;
+
+            @include media(lg) {
+                padding: 0 0 0 30px;
+            }
+
+            @include media(md) {
+                width: 100%;
+                padding: 0;
+            }
+
+        }
+
+    }
+
+
+}

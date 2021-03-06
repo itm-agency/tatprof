@@ -1,0 +1,374 @@
+.footer {
+    $width-left-col: 330px;
+    background: #274375 url('../images/footer-background.jpg') -200px bottom no-repeat;
+
+    @include media(lg) {
+        background-position: -400px bottom;
+    }
+
+    @include media(md) {
+        background-position: -500px bottom;
+    }
+
+    @include media(sm) {
+        background-position: -600px bottom;
+    }
+
+    a {
+        color: #fff;
+        font-weight: 600;
+    }
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
+
+    &__top, &__bottom {
+        @include _flexbox();
+        @include _align-items(center);
+        color: #fff;
+        font-weight: 600;
+
+        &-left {
+            width: $width-left-col;
+        }
+
+        &-right{
+            width: calc(100% - #{$width-left-col});
+            padding: 0 0 0 30px;
+            @include _flexbox();
+            @include _align-items(center);
+            @include _justify-content(flex-end);
+            margin-left: auto;
+        }
+
+    }
+
+    &__top {
+        $height: 130px;
+        height: $height;
+        border-bottom: 1px solid #438ae2;
+
+        @include media(lg) {
+            @include _flex-flow(column nowrap);
+        }
+
+        @include media(lg) {
+            height: auto;
+            padding: 40px 0;
+        }
+
+        &-left {
+            text-transform: uppercase;
+            font-size: 15px;
+            line-height: 18px;
+
+            @media screen and (max-width:1360px){
+                width: 190px;
+            }
+
+            @include media(lg) {
+                width: 100%;
+                text-align: center;
+                margin: 0 0 30px 0;
+            }
+
+        }
+
+        &-right{
+            @include _justify-content(space-between);
+
+            @media screen and (max-width:1360px){
+                width: calc(100% - 190px);
+            }
+
+            @include media(lg) {
+                width: 100%;
+                padding: 0;
+            }
+
+            @include media(md) {
+                @include _flex-flow(column nowrap);
+            }
+
+        }
+    }
+
+    &__bottom {
+        padding: 65px 0;
+        @include _align-items(flex-start);
+
+        @include media(lg) {
+            @include _flex-flow(column nowrap);
+        }
+
+        @include media(sm) {
+            padding: 40px 0;
+        }
+
+        &-left{
+            font-size: 15px;
+            line-height: 22px;
+
+            @include media(lg) {
+                order: 2;
+                width: 100%;
+                text-align: center;
+            }
+
+            @include media(sm) {
+                order: 1;
+                margin: 0 0 22px 0;
+            }
+
+            span {
+                display: block;
+                margin: 0 0 12px 0;
+            }
+
+            p {
+                font-weight: normal;
+            }
+
+        }
+
+        &-right {
+            @include _justify-content(space-between);
+            @include _align-items(flex-start);
+            padding-top: 45px;
+
+            @include media(lg) {
+                order: 1;
+                width: 100%;
+                padding: 0;
+                margin: 0 0 40px 0;
+            }
+
+            @include media(sm) {
+                @include _flex-flow(column nowrap);
+                @include _justify-content(center);
+                @include _align-items(center);
+                order: 2;
+                margin: 0;
+            }
+
+        }
+
+    }
+
+    &__nav{
+        white-space: nowrap;
+        @include _flexbox();
+
+        @include media(md) {
+            padding: 0px 0 25px 0;
+        }
+
+        @include media(xs) {
+            @include _flex-flow(column nowrap);
+            padding: 0px 0 40px 0;
+        }
+
+        > li {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 15px;
+            line-height: 15px;
+            font-weight: 600;
+
+            &:not(:first-child){
+                padding: 0 0px 0 30px;
+
+                @media screen and (max-width:1360px){
+                    padding: 0 0px 0 15px;
+                }
+
+                @include media(xs) {
+                    padding: 0 0px 25px 0;
+                }
+
+            }
+
+            @include media(xs) {
+                padding: 0 0px 25px 0;
+                text-align: center;
+                text-transform: none;
+
+                &:last-child{
+                    padding: 0;
+                }
+
+            }
+
+            a {
+                position: relative;
+
+                &::after{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    height: 2px;
+                    background-color: $background-red;
+                    left: 0;
+                    bottom: -7px;
+                    width: 0%;
+                    transition: width .18s linear;
+                    will-change: width;
+                }
+
+                &:hover {
+                    &::after{
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    &__phone{
+        font-size: 18px;
+        line-height: 18px;
+        white-space: nowrap;
+
+        @include media(md) {
+            margin: 0 0 25px 0;
+        }
+    }
+
+    &__btn{
+        height: 50px;
+        border-radius: 99px;
+        border: 2px solid #fff;
+        padding: 0 24px;
+        @include _flexbox();
+        @include _align-items(center);
+        font-size: 15px;
+        line-height: 15px;
+        white-space: nowrap;
+        transition: all .18s linear;
+
+        svg, img {
+            width: 18px;
+            height: 18px;
+            margin: 0 0 0 24px;
+        }
+
+        &:hover{
+            border-color: #fff;
+            background-color: #fff;
+            color: $color-blue;
+        }
+
+    }
+
+    &__contacts{
+        font-size: 15px;
+
+        &-instagram{
+            $size: 44px;
+            width: $size;
+            height: $size;
+            border-radius: 50%;
+            border: 3px solid #3362a5;
+            @include _flexbox();
+            @include _align-items(center);
+            @include _justify-content(center);
+            transition: all .18s linear;
+            position: relative;
+            transform: translateY(-10px);
+
+            @include media(sm) {
+                margin: 0 0 18px 0;
+                transform: translateY(0px);
+            }
+
+            svg, img {
+                width: 16px;
+                height: 16px;
+            }
+
+            &:hover {
+                background-color: #fff;
+                border-color: #fff;
+            }
+
+        }
+
+        &-sitemap {
+
+            @include media(sm) {
+                margin: 0 0 18px 0;
+            }
+
+            a {
+                color: #5d99e6;
+            }
+
+
+        }
+
+        &-email {
+            @include _flexbox();
+            color: #fff;
+
+            @include media(sm) {
+                @include _flex-flow(column nowrap);
+                @include _justify-content(center);
+                text-align: center;
+                margin: 0 0 18px 0;
+            }
+
+            svg, img {
+                $size: 24px;
+                width: $size;
+                height: $size;
+                margin: 0 12px 0 0;
+
+                @include media(sm) {
+                    margin: 0 auto 10px auto;
+                }
+            }
+
+        }
+
+        &-location {
+            @include _flexbox();
+            max-width: 340px;
+
+            @include media(sm) {
+                @include _flex-flow(column nowrap);
+                @include _justify-content(center);
+                text-align: center;
+                margin: 0 0 0px 0;
+                max-width: 280px;
+            }
+
+
+            p {
+                padding: 0;
+                margin: 0;
+            }
+
+            svg, img {
+                $size: 24px;
+                width: $size;
+                height: $size;
+                margin: 0 12px 0 0;
+
+                @include media(sm) {
+                    margin: 0 auto 10px auto;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+

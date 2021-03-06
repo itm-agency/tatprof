@@ -1,0 +1,16 @@
+.catalog {
+
+    &-home {
+        background-color: $background-grey;
+        padding: 110px 0;
+
+        @include media(lg) {
+            padding: 50px 0;
+        }
+
+        @include media(xs) {
+            padding-bottom: 0;
+        }
+    }
+
+}

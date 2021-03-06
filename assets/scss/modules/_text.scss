@@ -1,0 +1,161 @@
+.text {
+
+    &__style {
+        font-size: 17px;
+        line-height: 34px;
+        font-weight: 500;
+
+        @include media(md) {
+            font-size: 15px;
+            line-height: 26px;
+        }
+
+        p {
+            margin: 0;
+            padding: 0 0 30px 0;
+        }
+
+        ul {
+            margin: 0 0 40px 0;
+
+            @include media(md) {
+                width: 100% !important;
+                float: none !important;
+            }
+
+            > li {
+                position: relative;
+                padding: 0 0 0 40px;
+
+                &:not(:last-child) {
+                    margin: 0 0 12px 0;
+                }
+
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    background-color: $background-red;
+                    width: 25px;
+                    height: 2px;
+                    top: 16px;
+                    @include media(md) {
+                        top: 13px;
+                    }
+                }
+            }
+
+        }
+
+        a {
+            text-decoration: underline;
+            color: #438ae4;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        table {
+            $border-color: #e8e8e8;
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 20px;
+            background-color: transparent;
+            border-spacing: 0;
+            border-collapse: collapse;
+
+            thead, tbody {
+
+                > tr {
+
+                    th, td {
+                        padding: 22px;
+                        text-align: left;
+                        @include media(md) {
+                            white-space: nowrap;
+                            padding: 14px 22px;
+                        }
+                    }
+
+                }
+
+            }
+
+            thead {
+
+                > tr {
+
+                    th {
+                        background-color: #438ae4;
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: 15px;
+                        font-weight: 700;
+                    }
+
+                }
+
+            }
+
+            tbody {
+
+                > tr {
+
+                    td {
+                        border-bottom: 1px solid $border-color;
+
+                        &:first-child {
+                            border-left: 1px solid $border-color;
+                        }
+
+                        &:last-child {
+                            border-right: 1px solid $border-color;
+                        }
+
+
+                    }
+
+                    &:nth-child(odd) {
+
+                        td {
+                            background-color: #f1f1f1;
+                        }
+
+                    }
+
+                }
+
+            }
+
+
+
+        }
+
+        img {
+
+            @include media(md) {
+                float: none !important;
+                margin: 0 0 30px 0 !important;
+                width: auto !important;
+            }
+
+        }
+
+        br {
+            @include media(md) {
+                display: none;
+            }
+        }
+
+        .table-responsive {
+            @include media(md) {
+                min-height: .01%;
+                overflow-x: auto;
+                overflow-y: hidden;
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,8 @@
+.products {
+    margin: 0 0 90px 0;
+
+    @include media(md) {
+        margin: 0;
+    }
+
+}

@@ -1,0 +1,33 @@
+.breadcrumbs {
+    font-size: 17px;
+    margin: 0 0 10px 0;
+
+    @include media(lg) {
+        font-size: 14px;
+    }
+
+    > li {
+        font-weight: normal;
+        color: #838383;
+        display: inline-block;
+
+        &:not(:last-child) {
+
+            &::after {
+                content: '/';
+                display: inline-block;
+                font-weight: 700;
+                color: #252c34;
+                padding: 0 4px;
+            }
+
+        }
+
+        a {
+            font-weight: 700;
+            color: #252c34;
+        }
+
+    }
+
+}

@@ -1,0 +1,135 @@
+.lastpost {
+    padding: 110px 0 0 0;
+
+    @include media(lg) {
+        padding: 40px 0 0 0;
+    }
+
+    &__headpanel{
+        margin: 0 0 50px 0;
+
+        &-title{
+            font-weight: normal;
+            margin: 0;
+        }
+
+    }
+
+    &__list{
+        @include _flexbox();
+        @include _flex-wrap(wrap);
+        margin-bottom: 30px;
+
+        @include media(md) {
+            margin-bottom: 0px;
+        }
+
+        &-right {
+            @include _flexbox();
+            @include _flex-flow(column nowrap);
+            @include _justify-content(space-between);
+
+            > div {
+                &:first-child{
+
+                }
+            }
+        }
+
+        &-item {
+            position: relative;
+            cursor: pointer;
+
+            @include media(md) {
+                margin-bottom: 30px;
+            }
+
+            img {
+                position: relative;
+                z-index: 1;
+                            }
+
+            &--content{
+                $icon-width: 110px;
+                position: absolute;
+                bottom: 10px;
+                left: 55px;
+                right: 55px;
+                z-index: 3;
+                height: 140px;
+                @include _flexbox();
+
+                @include media(lg){
+                    height: 110px;
+                }
+
+                @include media(md) {
+                    height: auto;
+                    bottom: 30px;
+                    @include _flex-flow(column nowrap);
+                }
+
+                @include media(xs) {
+                    left: 20px;
+                    right: 20px;
+                }
+
+                span {
+                    text-transform: uppercase;
+                    color: #438ae4;
+                    font-weight: 700;
+                    font-size: 22px;
+                    line-height: 22px;
+                    display: block;
+                    margin: 0 0 12px 0;
+
+                    @include media(lg) {
+                        font-size: 18px;
+                        line-height: 18px;
+                        margin: 0 0 6px 0;
+                    }
+
+                }
+
+                p {
+                    color: #fff;
+                    font-weight: 600;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .icon {
+                    width: $icon-width;
+                    padding: 0 30px 0 0;
+
+                    @include media(md) {
+                        padding: 0 0px 20px 0;
+                    }
+
+                    img {
+                        @include media(md) {
+                            max-height: 60px;
+                        }
+                    }
+
+                }
+
+                .text {
+                    width: calc(100% - #{$icon-width});
+                }
+
+                &---image {
+                    @include media(md) {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 350px;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+}

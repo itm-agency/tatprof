@@ -1,0 +1,54 @@
+.pagination {
+    border-top: 1px solid #dadada;
+    padding: 20px 0 20px 0;
+    margin: 20px 0 0 0;
+
+    &__list {
+        $size: 42px;
+        font-size: 0px;
+
+        > li {
+            display: inline-block;
+            font-size: 19px;
+            font-weight: 600;
+
+            a {
+                display: block;
+                width: $size;
+                height: $size;
+                text-align: center;
+                line-height: $size;
+
+                &.prev, &.next {
+
+                }
+
+                &.disable {
+                    color: #838383;
+                    cursor: not-allowed;
+                }
+
+            }
+
+            &.active {
+                a {
+                    background-color: $background-blue;
+                    color: #fff;
+                }
+            }
+
+            &:not(.active) {
+                a {
+                    &:not(.disable) {
+                        &:hover {
+                            background-color: #eaeaea;
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+
+}

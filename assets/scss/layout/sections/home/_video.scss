@@ -1,0 +1,73 @@
+.video {
+
+    @include _flexbox();
+    @include _align-items(center);
+    @include _justify-content(center);
+    min-height: 100vh;
+    background: url('../images/video-background.jpg') center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+
+    &__container {
+        max-width: 350px;
+        margin: 0 auto;
+        text-align: center;
+
+        p {
+            font-size: 17px;
+            line-height: 24px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        span {
+            $size: 74px;
+            display: block;
+            width: $size;
+            height: $size;
+            border-radius: 50%;
+            background-color: $background-red;
+            margin: 0 auto 40px auto;
+            color: #fff;
+            font-size: 22px;
+            line-height: $size;
+            position: relative;
+            z-index: 1;
+
+            &::after {
+                $sz: 120px;
+                content: '';
+                position: absolute;
+                width: $sz;
+                height: $sz;
+                animation-delay: 0s;
+                animation: pulsate_video 2s;
+                animation-iteration-count: infinite;
+                opacity: 1;
+                display: block;
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                margin-left: -#{$sz / 2};
+                margin-top: -#{$sz / 2};
+                background: $background-red;
+                z-index: -1;
+            }
+
+        }
+
+    }
+
+}
+
+@keyframes pulsate_video {
+    0% {
+        transform: scale(0.6);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}

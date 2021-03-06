@@ -1,0 +1,72 @@
+.object {
+
+    &__info {
+
+        &-title {
+            font-size: 32px;
+            line-height: 42px;
+            font-weight: normal;
+            margin: 0 0 35px 0;
+        }
+
+        &-table {
+            font-size: 17px;
+
+            @include media(sm) {
+                font-size: 15px;
+                line-height: 20px;
+            }
+
+            > li {
+                @include _flexbox();
+
+                @include media(xs) {
+                    @include _flex-flow(column nowrap);
+                }
+
+                &:not(:last-child) {
+                    margin: 0 0 15px 0;
+                }
+
+                span {
+                    width: 40%;
+                    font-weight: 700;
+                    padding: 0 15px 0 0;
+
+                    @include media(xs) {
+                        width: 100%;
+                        display: block;
+                        margin: 0 0 2px 0;
+                    }
+
+                }
+
+                p {
+                    width: 60%;
+                    margin: 0;
+                    padding: 0;
+
+                    @include media(xs) {
+                        width: 100%;
+                    }
+
+                    a {
+                        color: #5d99e6;
+                        text-decoration: underline;
+
+                        &:hover{
+                            text-decoration: none;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+
+}

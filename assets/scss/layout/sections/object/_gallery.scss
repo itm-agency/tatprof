@@ -1,0 +1,49 @@
+.object {
+
+    &__gallery {
+
+        .swiper {
+
+            &-button{
+
+                &-prev, &-next {
+                    $size: 70px;
+                    $size-md: 56px;
+                    width: $size;
+                    height: $size;
+                    background-color: rgba(22, 54, 112, .6);
+                    color: #fff;
+                    text-align: center;
+                    line-height: $size;
+                    transition: background-color .18s linear;
+
+                    @include media(lg) {
+                       width: $size-md;
+                        height: $size-md;
+                    }
+
+                    &::after {
+                        color: #fff;
+                    }
+
+                    &:hover {
+                        background-color: $background-blue;
+                    }
+
+                }
+
+                &-prev{
+                    left: 0;
+                }
+
+                &-next {
+                    right: 0;
+                }
+
+            }
+
+        }
+
+    }
+
+}
